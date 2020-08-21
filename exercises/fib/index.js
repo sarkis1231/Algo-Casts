@@ -14,14 +14,14 @@ function memoize(fn) {
             return cache[args];
         }
         const result = fn.apply(this, args);
-        // console.log('sako: ', result)
+   
         cache[args] = result;
 
         return result;
 
     }
 }
-// const fib = memoize(fib);
+
 
 
 
@@ -42,11 +42,11 @@ module.exports = fib;
 
 
 
-// function fib(n) {
-// if (n < 2) {
-//     return n;
-// }
-// return fib(n - 1) + fib(n - 2);
-// }
+function fib(n) {
+if (n < 2) {
+    return n;
+}
+return fib(n - 1) + fib(n - 2);
+}
 
 
